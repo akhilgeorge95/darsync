@@ -1,0 +1,119 @@
+/* ─── Feature Page Specific Styles ──────────────────────────── */
+
+.feature-hero { position: relative; }
+.feature-hero__icon { margin-bottom: var(--space-lg); }
+.feature-hero__badge { margin-bottom: var(--space-md); }
+
+.feature-detail { padding: var(--space-3xl) 0; }
+.feature-detail__content { max-width: 600px; }
+.feature-detail__content h2 { font-size: var(--text-2xl); font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-md); }
+.feature-detail__content p { color: var(--color-text-light); line-height: 1.7; margin-bottom: var(--space-lg); }
+
+.feature-workflow { counter-reset: workflow; }
+.feature-workflow__step {
+    display: flex; gap: var(--space-xl); align-items: flex-start;
+    padding: var(--space-xl) 0; border-bottom: 1px solid var(--color-border);
+    position: relative;
+}
+.feature-workflow__step::before {
+    counter-increment: workflow;
+    content: counter(workflow);
+    display: flex; align-items: center; justify-content: center;
+    min-width: 48px; height: 48px; border-radius: 50%;
+    background: transparent; color: var(--copper);
+    border: 0.5px solid var(--copper);
+    font-family: var(--font-display); font-weight: 400; font-size: var(--text-lg);
+    flex-shrink: 0;
+}
+.feature-workflow__step h3 { font-size: var(--text-lg); font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-xs); }
+.feature-workflow__step p { color: var(--color-text-light); }
+
+.related-features { padding: var(--space-3xl) 0; }
+.related-features__title { font-size: var(--text-2xl); font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-xl); text-align: center; }
+
+/* ─── Solutions Page ────────────────────────────────────────── */
+.role-card { text-decoration: none; color: inherit; }
+.role-card:hover .card__title { color: var(--color-secondary); }
+
+.day-in-life { background: var(--color-surface-alt); border-radius: var(--border-radius-lg); padding: var(--space-2xl); }
+.day-in-life__timeline { position: relative; padding-left: var(--space-2xl); }
+.day-in-life__timeline::before {
+    content: ''; position: absolute; left: 12px; top: 0; bottom: 0;
+    width: 2px; background: var(--color-border);
+}
+.day-in-life__item {
+    position: relative; padding: var(--space-md) 0;
+}
+.day-in-life__item::before {
+    content: ''; position: absolute; left: calc(-1 * var(--space-2xl) + 8px); top: 20px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--color-secondary); border: 2px solid var(--color-surface-alt);
+}
+.day-in-life__time { font-size: var(--text-sm); font-weight: 600; color: var(--color-secondary); }
+.day-in-life__desc { color: var(--color-text); }
+
+/* ─── Industry Pages ────────────────────────────────────────── */
+.industry-challenges { list-style: none; }
+.industry-challenges li {
+    display: flex; align-items: flex-start; gap: var(--space-md);
+    padding: var(--space-lg); background: var(--color-surface);
+    border: 1px solid var(--color-border); border-radius: var(--border-radius);
+    margin-bottom: var(--space-md);
+}
+.industry-challenges .emoji-icon { font-size: 2rem; margin-bottom: 0; flex-shrink: 0; }
+
+/* ─── Use Case Pages ────────────────────────────────────────── */
+.manual-steps { counter-reset: manual; list-style: none; }
+.manual-steps li {
+    counter-increment: manual;
+    padding: var(--space-md) 0;
+    padding-left: var(--space-2xl);
+    position: relative;
+    border-left: 0.5px solid rgba(184, 92, 60, 0.35);
+    color: var(--sage);
+    font-family: var(--font-body);
+}
+.manual-steps li::before {
+    content: counter(manual);
+    position: absolute; left: -14px; top: var(--space-md);
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(184, 92, 60, 0.10); color: #B85C3C;
+    border: 0.5px solid rgba(184, 92, 60, 0.35);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 0.85rem; font-weight: 400;
+}
+
+.auto-steps { counter-reset: auto-step; list-style: none; }
+.auto-steps li {
+    counter-increment: auto-step;
+    padding: var(--space-md) 0;
+    padding-left: var(--space-2xl);
+    position: relative;
+    border-left: 0.5px solid rgba(180, 100, 40, 0.4);
+    font-family: var(--font-body);
+    color: var(--oud);
+}
+.auto-steps li::before {
+    content: counter(auto-step);
+    position: absolute; left: -14px; top: var(--space-md);
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--copper-soft); color: var(--copper);
+    border: 0.5px solid var(--copper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 0.85rem; font-weight: 400;
+}
+
+/* ─── Comparison Pages ──────────────────────────────────────── */
+.vs-hero { text-align: center; }
+.vs-hero__logos { display: flex; align-items: center; justify-content: center; gap: var(--space-xl); margin: var(--space-xl) 0; }
+.vs-hero__logo { font-size: var(--text-2xl); font-weight: 800; }
+.vs-hero__vs { font-size: var(--text-xl); color: var(--color-secondary); font-weight: 700; }
+
+.winner-badge {
+    display: inline-flex; align-items: center; gap: var(--space-xs);
+    background: var(--copper-soft); color: var(--saffron);
+    border: 0.5px solid rgba(20, 20, 20, 0.3);
+    padding: 3px 10px; border-radius: 2px;
+    font-family: var(--font-ui); font-size: 0.68rem; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.2em;
+}

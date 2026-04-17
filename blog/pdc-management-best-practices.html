@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDC Management Best Practices for Property Managers in GCC</title>
+  <meta name="description" content="Master PDC management for property managers in GCC. Best practices for cheque lifecycle, bounce handling, automation, and avoiding common mistakes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="/blog/pdc-management-best-practices.html">
+
+  <meta property="og:title" content="PDC Management Best Practices for Property Managers in GCC">
+  <meta property="og:description" content="Master the PDC lifecycle from collection to deposit with automation and best practices for GCC property managers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/blog/pdc-management-best-practices.html">
+  <meta property="og:site_name" content="Darsync">
+  <meta property="og:locale" content="en_AE">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDC Management Best Practices for Property Managers in GCC">
+  <meta name="twitter:description" content="Best practices for managing post-dated cheques in GCC property management.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PDC Management Best Practices for Property Managers in GCC",
+    "description": "Master PDC management for property managers in GCC. Best practices for cheque lifecycle, bounce handling, automation, and avoiding common mistakes.",
+    "datePublished": "2026-03-28",
+    "dateModified": "2026-03-28",
+    "author": {"@type": "Organization", "name": "Darsync"},
+    "publisher": {"@type": "Organization", "name": "Darsync", "url": "https://darsync.ae"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "/blog/pdc-management-best-practices.html"},
+    "keywords": "PDC management property, post-dated cheques UAE, PDC automation, cheque management best practices"
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/features.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <style>
+    :root{--navy:#2C1810;--gold:#B46428;--emerald:#2C1810;--navy-light:#1A0E06;--gold-light:#B46428;--white:#FFFFFF;--off-white:#FAF7F2;--gray-100:#FAF7F2;--gray-200:#F3EDE3;--gray-400:#8A7B6A;--gray-600:#8A7B6A;--gray-800:#2C1810;--shadow-sm:0 1px 3px rgba(20, 20, 20,0.08);--shadow-md:0 4px 12px rgba(20, 20, 20,0.12);--shadow-lg:0 8px 30px rgba(20, 20, 20,0.16);--radius:2px;--radius-lg:2px;--transition:0.3s ease}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;font-size:16px}body{font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;color:var(--gray-800);line-height:1.6;background:var(--white);-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 24px}a{text-decoration:none;color:inherit;transition:color var(--transition)}.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);border-bottom:2px solid var(--gold);padding:0}.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:72px}.logo{font-size:1.5rem;font-weight:800;color:var(--white);letter-spacing:-0.5px}.logo span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:32px;list-style:none}.nav-links a{color:rgba(255, 255, 255,0.85);font-size:0.9375rem;font-weight:500}.nav-links a:hover{color:var(--gold)}.nav-phone{color:var(--gold-light)!important;font-weight:600!important}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 28px;border-radius:var(--radius);font-size:0.9375rem;font-weight:700;cursor:pointer;border:none;transition:all var(--transition);white-space:nowrap}.btn-gold{background:var(--gold);color:var(--white)}.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 16px rgba(180, 100, 40,0.4)}
+    .blog-hero{padding:120px 0 40px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:var(--white);text-align:center}.blog-hero h1{font-size:2.25rem;margin-bottom:16px;max-width:800px;margin-left:auto;margin-right:auto;line-height:1.3}.blog-hero .blog-meta{font-size:0.9375rem;opacity:0.8}
+    .blog-post{max-width:800px;margin:0 auto;padding:48px 24px 80px}.blog-post h2{font-size:1.5rem;color:var(--navy);margin:40px 0 16px;line-height:1.3}.blog-post h3{font-size:1.25rem;color:var(--navy);margin:32px 0 12px;line-height:1.4}.blog-post p{margin-bottom:16px;line-height:1.8;font-size:1.0625rem}.blog-post ul,.blog-post ol{margin:0 0 16px 24px;line-height:1.8;font-size:1.0625rem}.blog-post li{margin-bottom:8px}.blog-post a{color:var(--gold);font-weight:600}.blog-post a:hover{color:var(--emerald)}.blog-post blockquote{border-left:4px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--gray-100);border-radius:0 var(--radius) var(--radius) 0;font-style:italic}
+    .blog-cta{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:var(--white);padding:48px;border-radius:var(--radius-lg);text-align:center;margin:48px 0}.blog-cta h2{color:var(--white);font-size:1.75rem;margin-bottom:16px}.blog-cta p{color:rgba(255, 255, 255,0.85);margin-bottom:24px;font-size:1.0625rem}
+    .site-footer{background:var(--navy);color:rgba(255, 255, 255,0.7);padding:60px 0 0}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}.footer-brand p{margin:16px 0;font-size:0.875rem;line-height:1.7}.footer-contact-item{margin-top:8px;font-size:0.875rem}.footer-contact-item a{color:var(--gold-light)}.footer-col h4{color:var(--white);font-size:0.9375rem;margin-bottom:16px}.footer-col ul{list-style:none}.footer-col li{margin-bottom:10px}.footer-col a{font-size:0.8125rem;color:rgba(255, 255, 255,0.6)}.footer-col a:hover{color:var(--gold)}.footer-bottom{border-top:1px solid rgba(255, 255, 255,0.1);padding:24px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}.footer-bottom p{font-size:0.8125rem}.footer-legal{display:flex;list-style:none;gap:24px}.footer-legal a{font-size:0.8125rem;color:rgba(255, 255, 255,0.5)}.footer-legal a:hover{color:var(--gold)}
+    @media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:24px;gap:16px}.nav-links.active{display:flex}.mobile-toggle{display:block;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer}.blog-hero h1{font-size:1.5rem}.blog-post h2{font-size:1.25rem}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;text-align:center}.footer-legal{flex-wrap:wrap;justify-content:center}.blog-cta{padding:32px 24px}}@media(min-width:769px){.mobile-toggle{display:none}}
+  
+    /* ─── Header / Footer Unification (Desert Sand & Copper) ─── */
+    .site-header {
+      background: rgba(255, 255, 255, 0.96) !important;
+      border-bottom: 0.5px solid rgba(20, 20, 20, 0.12) !important;
+      backdrop-filter: blur(12px);
+    }
+    .nav-wrap { height: 80px !important; }
+    .logo {
+      font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700 !important;
+      color: var(--navy) !important;
+      letter-spacing: 0.01em !important;
+      font-size: 1.5rem !important;
+    }
+    .logo span { color: var(--gold) !important; font-style: normal !important; }
+    .nav-links a {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--navy) !important;
+      font-size: 0.78rem !important;
+      font-weight: 300 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.2em !important;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--gold) !important; }
+    .nav-links a:hover::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: -3px;
+      height: 0.5px; background: var(--gold);
+    }
+    .mobile-toggle { color: var(--navy) !important; }
+    .nav-phone {
+      color: var(--gold) !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 0.15em !important;
+      font-weight: 400 !important;
+      text-transform: uppercase !important;
+    }
+    .site-header .btn,
+    .site-header .btn-gold {
+      background: var(--navy) !important;
+      color: var(--white) !important;
+      border: 1px solid var(--navy) !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      text-transform: uppercase !important;
+      letter-spacing: 0.2em !important;
+      font-size: 0.72rem !important;
+      padding: 12px 24px !important;
+      border-radius: 2px !important;
+    }
+    .site-header .btn:hover,
+    .site-header .btn-gold:hover {
+      background: var(--navy-light) !important;
+      border-color: var(--navy-light) !important;
+      letter-spacing: 0.24em !important;
+    }
+    @media (max-width: 768px) {
+      .nav-links.active {
+        background: var(--navy) !important;
+        border-bottom: 0.5px solid var(--gold) !important;
+      }
+      .nav-links.active a { color: var(--white) !important; }
+    }
+
+    /* Footer polish: dark oud + copper accent headings */
+    .site-footer { background: var(--navy) !important; color: rgba(255, 255, 255, 0.7) !important; }
+    .site-footer .logo { color: var(--white) !important; }
+    .footer-col h4 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gold) !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.22em !important;
+      font-weight: 400 !important;
+      font-size: 0.72rem !important;
+    }
+    .footer-col a,
+    .footer-legal a,
+    .footer-contact-item a {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      font-size: 0.76rem !important;
+      font-weight: 300 !important;
+    }
+    .footer-col a:hover,
+    .footer-legal a:hover,
+    .footer-contact-item a:hover { color: var(--gold) !important; }
+    .footer-bottom {
+      border-top: 0.5px solid rgba(255, 255, 255, 0.12) !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-wrap" role="navigation" aria-label="Main navigation">
+        <a href="/" class="logo" aria-label="Darsync Home"><img src="../images/image.png" alt="Darsync" height="60" style="display:block;height:60px;width:auto;object-fit:contain;"></a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="this.nextElementSibling.classList.toggle('active'); this.setAttribute('aria-expanded', this.nextElementSibling.classList.contains('active'));">&#9776;</button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/solutions/">Solutions</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/resources/">Resources</a></li>
+          <li><a href="tel:+97140000000" class="nav-phone">+971 4 XXX XXXX</a></li>
+          <li><a href="/contact/demo.html" class="btn btn-gold">Start Free Trial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <h1>PDC Management Best Practices for Property Managers in GCC &#128179;</h1>
+        <p class="blog-meta">March 28, 2026 &middot; 8 min read</p>
+      </div>
+    </section>
+
+    <article class="blog-post">
+
+      <p>Post-Dated Cheques (PDCs) remain the backbone of rent collection across the GCC. Despite the global shift toward digital payments, the UAE, Saudi Arabia, Bahrain, and other Gulf states continue to rely heavily on PDCs for rental transactions. For property managers, this means mastering <strong>PDC management</strong> is not optional — it is a core competency that directly impacts cash flow, tenant relationships, and operational efficiency.</p>
+
+      <p>Yet many property management firms still handle PDCs with spreadsheets, filing cabinets, and manual bank visits. This guide outlines the best practices for managing the complete PDC lifecycle, the most common mistakes we see in the market, and how automation can transform cheque management from a daily headache into a seamless background process.</p>
+
+      <h2>&#128257; Understanding the PDC Lifecycle</h2>
+
+      <p>Every post-dated cheque goes through a predictable lifecycle from the moment it is received to the moment the funds clear. Understanding each stage is essential for effective management.</p>
+
+      <h3>Stage 1: Collection and Intake</h3>
+      <p>When a new lease is signed, the tenant provides a set of PDCs — typically 4 (quarterly payments), 6 (bi-monthly), or 12 (monthly). At this stage, you must record every detail: cheque number, issuing bank, date, amount, and the associated tenant and lease. Physical cheques must be stored in a secure, organized location — typically a fireproof safe or bank safe deposit box.</p>
+
+      <p>This is where many property managers make their first mistake. If cheque details are not accurately recorded at intake, every subsequent step in the lifecycle becomes unreliable. A transposed cheque number or incorrect date can cascade into missed deposits, failed reconciliation, and tenant disputes.</p>
+
+      <h3>Stage 2: Tracking and Scheduling</h3>
+      <p>Once collected, each cheque sits in a holding status until its deposit date approaches. Your system must track every cheque across your entire portfolio and alert you when deposit dates are approaching. For a portfolio of 300 units with an average of 6 cheques per tenant, that is 1,800 individual cheques to track — each with its own deposit date, amount, and status.</p>
+
+      <h3>Stage 3: Deposit and Presentation</h3>
+      <p>When the deposit date arrives, the physical cheque must be presented to the bank. Some property managers deposit cheques individually, while others batch deposits by bank or date. The key best practice here is to deposit cheques on or slightly before the due date — not after. Late deposits delay cash flow and can create confusion in financial reporting.</p>
+
+      <h3>Stage 4: Clearing and Confirmation</h3>
+      <p>After deposit, cheques typically take 1-3 business days to clear. During this period, the funds are not yet available but the cheque is no longer in your physical possession. Your system should track this intermediate "pending" status and confirm clearance when the funds appear in your bank account.</p>
+
+      <h3>Stage 5: Bounce Handling</h3>
+      <p>Bounced cheques are an inevitable reality of PDC management. Cheques bounce for various reasons — insufficient funds, signature mismatch, account frozen, or technical errors. When a bounce occurs, you need to act quickly: notify the tenant, understand the reason, negotiate a resolution (replacement cheque, cash payment, or payment plan), and update your records accordingly.</p>
+
+      <p>In the UAE, a bounced cheque is a criminal offense under certain circumstances, giving landlords significant legal leverage. However, most property managers prefer to resolve bounces amicably to maintain tenant relationships. Darsync's <a href="/features/pdc-automation.html">PDC automation system</a> detects bounces within hours and triggers immediate automated notifications to the tenant and the property manager.</p>
+
+      <h3>Stage 6: Replacement and Reconciliation</h3>
+      <p>When a cheque bounces or a lease is modified, replacement cheques must be collected and the old cheques returned or cancelled. This stage requires careful tracking to ensure that no cheque is lost in the exchange and that financial records accurately reflect the current state.</p>
+
+      <h2>&#9888; Top 7 PDC Management Mistakes</h2>
+
+      <p>Based on our experience working with hundreds of property management firms across the GCC, these are the most common and costly PDC management mistakes:</p>
+
+      <ol>
+        <li><strong>Relying on spreadsheets for tracking:</strong> Spreadsheets have no built-in alerts, no audit trail, and no integration with banking systems. A single formula error can throw off your entire portfolio's payment tracking. With 1,000+ cheques in play, spreadsheet-based tracking is a ticking time bomb.</li>
+        <li><strong>No digital backup of cheque details:</strong> If physical cheques are lost or damaged, you need the details to request replacements. Without digital records (ideally including scanned images), reconstruction is painful and time-consuming.</li>
+        <li><strong>Late deposits:</strong> Depositing cheques days after the due date disrupts cash flow and creates discrepancies between expected and actual revenue. Even 2-3 days of delay across hundreds of cheques adds up to significant lost interest income.</li>
+        <li><strong>Delayed bounce follow-up:</strong> Every day between a bounce and tenant notification increases the difficulty of resolution. The fastest resolution comes from same-day notification, which is only possible with automated bounce detection.</li>
+        <li><strong>Poor physical storage:</strong> Cheques stored in unlocked drawers, mixed with other documents, or without a clear organizational system create risk of loss, theft, and misfiling. Cheques represent real money and should be treated with the same security as cash.</li>
+        <li><strong>No reconciliation process:</strong> Failing to reconcile deposited cheques against bank statements monthly means discrepancies go undetected for weeks or months, making resolution exponentially harder.</li>
+        <li><strong>Mixing personal and trust account cheques:</strong> In the UAE, RERA requires that tenant rent payments be deposited into designated trust accounts. Mixing trust and operating account cheques is a compliance violation that can result in penalties. Learn more about managing the <a href="/use-cases/manage-pdc-lifecycle.html">complete PDC lifecycle</a>.</li>
+      </ol>
+
+      <h2>&#128640; Automation: The Game Changer</h2>
+
+      <p>Every best practice listed above becomes dramatically easier with automation. Modern PDC management systems like Darsync's <a href="/features/pdc-automation.html">PDC automation module</a> transform cheque management in the following ways:</p>
+
+      <h3>Digital Intake with OCR</h3>
+      <p>Scan cheques at collection time. OCR technology reads the cheque number, amount, date, and bank automatically, eliminating manual data entry errors. Each scanned cheque is linked to the corresponding lease and tenant record, creating a complete digital trail from day one.</p>
+
+      <h3>Automated Deposit Scheduling</h3>
+      <p>The system maintains a deposit calendar showing every cheque that needs to be presented in the coming days, weeks, and months. Automated reminders ensure no deposit date is missed. Some advanced systems can even generate deposit slips for batch presentations.</p>
+
+      <h3>Real-Time Status Tracking</h3>
+      <p>Every cheque has a live status — held, deposited, clearing, cleared, bounced, replaced, or cancelled. Dashboards show portfolio-wide cheque status at a glance, making it easy to spot potential issues before they become problems.</p>
+
+      <h3>Bounce Detection and Response</h3>
+      <p>When integrated with banking systems, automated PDC management detects bounces within hours of occurrence. The system immediately triggers a notification workflow — alerting the property manager, sending the tenant a WhatsApp message with the bounce details, and creating a follow-up task for resolution.</p>
+
+      <h3>Automated Reconciliation</h3>
+      <p>Bank feed integration allows the system to automatically match cleared deposits against expected cheque amounts. Discrepancies are flagged instantly rather than discovered during monthly reconciliation. This turns a multi-hour monthly process into a real-time, continuous verification.</p>
+
+      <h3>Compliance Reporting</h3>
+      <p>For RERA-regulated property management companies, the system generates trust account reports showing that all tenant payments are properly segregated. This simplifies regulatory audits and protects your license.</p>
+
+      <h2>&#128202; Measuring PDC Management Performance</h2>
+
+      <p>To ensure your PDC management is performing well, track these key metrics:</p>
+
+      <ul>
+        <li><strong>On-time deposit rate:</strong> Percentage of cheques deposited on or before the due date. Target: 99%+.</li>
+        <li><strong>Bounce rate:</strong> Percentage of deposited cheques that bounce. Industry average is 3-5%; well-managed portfolios achieve under 2%.</li>
+        <li><strong>Bounce resolution time:</strong> Average days from bounce detection to replacement cheque collection or alternative payment. Target: under 5 business days.</li>
+        <li><strong>Reconciliation accuracy:</strong> Percentage of monthly bank reconciliation items that match on first pass. Target: 98%+.</li>
+        <li><strong>Cheque inventory accuracy:</strong> Physical cheque count matching digital records. Should be 100% at every audit.</li>
+      </ul>
+
+      <h2>&#128161; Looking Ahead: The Hybrid Future</h2>
+
+      <p>While PDCs will remain important in the GCC for the foreseeable future, the payment landscape is evolving. The UAE Central Bank's push for digital payments, the rise of open banking, and changing tenant demographics all point toward a hybrid future where PDCs coexist with online payments, direct debits, and mobile wallets.</p>
+
+      <p>Property managers who invest in systems that handle both traditional PDC management and modern digital payment workflows will be best positioned for this transition. The ability to offer tenants their preferred payment method while maintaining a unified financial view across all channels is a significant competitive advantage.</p>
+
+      <div class="blog-cta">
+        <h2>&#128179; Automate Your PDC Management</h2>
+        <p>Darsync's PDC automation handles the entire cheque lifecycle — from OCR scanning to bounce alerts. Zero missed deposits, zero lost cheques.</p>
+        <a href="/contact/demo.html" class="btn btn-gold">Start Free Trial &#8594;</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="../images/image.png" alt="Darsync" height="60" style="display:block;height:60px;width:auto;object-fit:contain;"></a>
+          <p>Property management software built for the Gulf. GCC-native compliance, Arabic-first design, and 303+ features to run your portfolio on autopilot.</p>
+          <div class="footer-contact-item">&#9742; <a href="tel:+97140000000">+971 4 XXX XXXX</a></div>
+          <div class="footer-contact-item">&#9993; <a href="mailto:info@darsync.ae">info@darsync.ae</a></div>
+          <div class="footer-contact-item" style="margin-top: 16px;"><a href="/contact/demo.html" class="btn btn-gold" style="font-size: 0.8125rem; padding: 10px 20px;">Book a Demo</a></div>
+        </div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="/features/">Features</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/resources/how-it-works.html">How It Works</a></li><li><a href="/resources/roi-calculator.html">ROI Calculator</a></li></ul></div>
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="/solutions/property-managers.html">Property Managers</a></li><li><a href="/solutions/finance-teams.html">Finance Teams</a></li><li><a href="/solutions/maintenance-teams.html">Maintenance Teams</a></li><li><a href="/solutions/leasing-agents.html">Leasing Agents</a></li><li><a href="/solutions/owners-investors.html">Owners &amp; Investors</a></li></ul></div>
+        <div class="footer-col"><h4>Industries</h4><ul><li><a href="/industries/residential.html">Residential</a></li><li><a href="/industries/commercial.html">Commercial</a></li><li><a href="/industries/mixed-use.html">Mixed-Use</a></li><li><a href="/industries/student-housing.html">Student Housing</a></li></ul></div>
+        <div class="footer-col"><h4>Resources</h4><ul><li><a href="/resources/how-it-works.html">How It Works</a></li><li><a href="/resources/roi-calculator.html">ROI Calculator</a></li><li><a href="/resources/faq.html">FAQ</a></li><li><a href="/blog/">Blog</a></li><li><a href="/compare/">Compare</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Darsync. All rights reserved.</p>
+        <ul class="footer-legal"><li><a href="/legal/privacy.html">Privacy Policy</a></li><li><a href="/legal/terms.html">Terms of Service</a></li><li><a href="/legal/cookies.html">Cookie Policy</a></li><li><a href="/legal/refund.html">Refund Policy</a></li><li><a href="/legal/sla.html">SLA</a></li></ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/tracking.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url><loc>https://www.darsync.ae/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+    <!-- Features -->
+    <url><loc>https://www.darsync.ae/features/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://www.darsync.ae/features/ejari-compliance.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/pdc-automation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/smart-maintenance.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/tenant-portal.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/owner-dashboard.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/whatsapp-workflows.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/security-access.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/community-engagement.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/smart-rent-pricing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/ai-insights.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/features/financial-operations.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/features/lease-management.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/features/reporting-analytics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/features/communication-collaboration.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/features/facility-operations.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- Solutions -->
+    <url><loc>https://www.darsync.ae/solutions/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/property-managers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/finance-teams.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/maintenance-teams.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/leasing-agents.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/owners-investors.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/compliance-officers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/solutions/security-teams.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- Industries -->
+    <url><loc>https://www.darsync.ae/industries/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://www.darsync.ae/industries/residential.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/commercial.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/mixed-use.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/student-housing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/vacation-rentals.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/owners-associations.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/co-working.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/industries/real-estate-developers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- Use Cases -->
+    <url><loc>https://www.darsync.ae/use-cases/automate-rent-collection.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/use-cases/streamline-ejari-compliance.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/use-cases/reduce-maintenance-response.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/use-cases/manage-pdc-lifecycle.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/use-cases/owner-reporting.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/use-cases/tenant-onboarding.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/use-cases/visitor-management.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- Pricing -->
+    <url><loc>https://www.darsync.ae/pricing/index.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+    <!-- Compare -->
+    <url><loc>https://www.darsync.ae/compare/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/compare/yardi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/compare/entrata.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/compare/appfolio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/compare/goyzer.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/compare/elate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- Resources -->
+    <url><loc>https://www.darsync.ae/resources/how-it-works.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/resources/roi-calculator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/resources/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- Contact -->
+    <url><loc>https://www.darsync.ae/contact/index.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/contact/demo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- Blog -->
+    <url><loc>https://www.darsync.ae/blog/index.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.darsync.ae/blog/what-is-property-management-software.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/best-property-management-software-uae.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/automate-rent-collection-uae.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/ejari-registration-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/pdc-management-best-practices.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/reduce-maintenance-response-time.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/rera-compliance-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/tenant-retention-strategies.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/property-management-kpis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/digital-transformation-gcc-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.darsync.ae/blog/tawtheeq-guide-abu-dhabi.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- Legal -->
+    <url><loc>https://www.darsync.ae/legal/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://www.darsync.ae/legal/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://www.darsync.ae/legal/cookie-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://www.darsync.ae/legal/refund-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://www.darsync.ae/legal/sla.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://www.darsync.ae/legal/data-processing.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://www.darsync.ae/legal/acceptable-use.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

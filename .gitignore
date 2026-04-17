@@ -1,0 +1,11 @@
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+__MACOSX/
+.vscode/
+.idea/
+.claude/
+
+# logs
+*.log
+npm-debug.log*

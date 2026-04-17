@@ -1,0 +1,10 @@
+{
+    "name": "Darsync",
+    "short_name": "Darsync",
+    "description": "Property Management Software Built for the Gulf",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2C1810",
+    "theme_color": "#2C1810",
+    "icons": []
+}

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.darsync.ae/sitemap.xml
+Disallow: /404.html
+Disallow: /landing/
+Disallow: /contact/thank-you.html

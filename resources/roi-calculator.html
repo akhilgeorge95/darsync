@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI Calculator &mdash; Property Management Software Savings | Darsync</title>
+  <meta name="description" content="Calculate how much time and money you'll save with Darsync property management software. See your ROI based on your portfolio size and team.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="/resources/roi-calculator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculate Your ROI with Darsync">
+  <meta property="og:description" content="See how much you'll save with Darsync. Enter your portfolio details and get an instant ROI calculation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/resources/roi-calculator.html">
+  <meta property="og:site_name" content="Darsync">
+  <meta property="og:locale" content="en_AE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculate Your ROI with Darsync">
+  <meta name="twitter:description" content="See how much you'll save with Darsync property management software.">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Darsync ROI Calculator",
+    "description": "Calculate how much time and money you'll save with Darsync property management software.",
+    "url": "/resources/roi-calculator.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "/resources/how-it-works.html" },
+        { "@type": "ListItem", "position": 3, "name": "ROI Calculator", "item": "/resources/roi-calculator.html" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/features.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <style>
+    .calculator {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--color-white, #fff);
+      border-radius: var(--radius-lg, 16px);
+      padding: var(--space-2xl, 48px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .calculator__field {
+      margin-bottom: var(--space-lg, 24px);
+    }
+    .calculator__field label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: var(--space-xs, 8px);
+      color: var(--color-text, #1a1a2e);
+    }
+    .calculator__field input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--color-border, rgba(20, 20, 20,0.12));
+      border-radius: var(--radius-md, 8px);
+      font-size: var(--text-base, 16px);
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+    .calculator__field input:focus {
+      outline: none;
+      border-color: var(--color-primary, #2563eb);
+    }
+    .calculator__btn {
+      width: 100%;
+      padding: 16px;
+      font-size: var(--text-lg, 18px);
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: var(--space-md, 16px);
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg, 24px);
+      margin-top: var(--space-xl, 32px);
+    }
+    .result-card {
+      text-align: center;
+      padding: var(--space-lg, 24px);
+      background: var(--color-white, #fff);
+      border-radius: var(--radius-md, 8px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .result-card__label {
+      font-size: var(--text-sm, 14px);
+      color: var(--color-text-light, #8A7B6A);
+      margin-bottom: var(--space-xs, 8px);
+    }
+    .result-card__value {
+      font-size: var(--text-3xl, 30px);
+      font-weight: 800;
+      color: var(--color-primary, #2563eb);
+    }
+    .result-card--highlight {
+      background: var(--color-primary, #2563eb);
+    }
+    .result-card--highlight .result-card__label {
+      color: rgba(255, 255, 255,0.8);
+    }
+    .result-card--highlight .result-card__value {
+      color: #fff;
+    }
+    .scenario-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--space-lg, 24px);
+    }
+    .scenario-table th,
+    .scenario-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border, rgba(20, 20, 20,0.12));
+    }
+    .scenario-table th {
+      font-weight: 700;
+      color: var(--color-primary, #2563eb);
+      background: rgba(37,99,235,0.05);
+    }
+    .scenario-table tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__container">
+      <a href="/" class="nav__logo" aria-label="Darsync Home">
+        <span class="nav__logo-text"><img src="../images/image.png" alt="Darsync" height="60" style="display:block;height:60px;width:auto;object-fit:contain;"></span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="this.nextElementSibling.classList.toggle('nav__links--open'); this.setAttribute('aria-expanded', this.nextElementSibling.classList.contains('nav__links--open'));">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="/features/">Features</a></li>
+        <li><a href="/solutions/">Solutions</a></li>
+        <li><a href="/industries/">Industries</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="tel:+97140000000" class="nav__phone">+971 4 XXX XXXX</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="/contact/demo.html" class="btn btn--primary">Start Free Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> <span>/</span> <a href="/resources/">Resources</a> <span>/</span> ROI Calculator
+        </nav>
+        <div class="emoji-icon emoji-icon--xl">&#x1F4B0;</div>
+        <p class="page-hero__eyebrow">ROI Calculator</p>
+        <h1 class="page-hero__title">See How Much You'll Save with Darsync</h1>
+        <p class="page-hero__subtitle">Enter your portfolio details below and get an instant calculation of your time savings, cost reduction, and return on investment.</p>
+      </div>
+    </div>
+
+    <!-- Calculator -->
+    <section class="section">
+      <div class="container">
+        <div class="calculator">
+          <div class="calculator__field">
+            <label for="calc-units">Number of Properties / Units Managed</label>
+            <input type="number" id="calc-units" placeholder="e.g. 100" min="1">
+          </div>
+          <div class="calculator__field">
+            <label for="calc-hours">Hours Spent on Property Management Per Week</label>
+            <input type="number" id="calc-hours" placeholder="e.g. 40" min="1">
+          </div>
+          <div class="calculator__field">
+            <label for="calc-rate">Average Hourly Cost of Your Team (USD)</label>
+            <input type="number" id="calc-rate" placeholder="25" value="25" min="1">
+          </div>
+          <div class="calculator__field">
+            <label for="calc-staff">Number of Staff in Property Management</label>
+            <input type="number" id="calc-staff" placeholder="3" value="3" min="1">
+          </div>
+          <button class="btn btn--primary calculator__btn" onclick="calculateROI()">Calculate My Savings</button>
+        </div>
+
+        <!-- Results -->
+        <div id="calculator-results" hidden="true" style="margin-top: var(--space-2xl, 48px);">
+          <div class="section__header">
+            <h2 class="section__title">Your Estimated Savings</h2>
+            <p class="section__subtitle">Based on your inputs and a 60% time savings across 11 automated workflows.</p>
+          </div>
+          <div class="results-grid">
+            <div class="result-card">
+              <p class="result-card__label">Current Monthly Cost</p>
+              <p class="result-card__value" id="result-current-cost">$0</p>
+            </div>
+            <div class="result-card">
+              <p class="result-card__label">Monthly Time Savings</p>
+              <p class="result-card__value" id="result-savings">$0</p>
+            </div>
+            <div class="result-card">
+              <p class="result-card__label">Darsync Monthly Cost</p>
+              <p class="result-card__value" id="result-product-cost">$0</p>
+            </div>
+            <div class="result-card result-card--highlight">
+              <p class="result-card__label">Net Monthly Savings</p>
+              <p class="result-card__value" id="result-net">$0</p>
+            </div>
+            <div class="result-card result-card--highlight">
+              <p class="result-card__label">Annual Savings</p>
+              <p class="result-card__value" id="result-annual">$0</p>
+            </div>
+            <div class="result-card result-card--highlight">
+              <p class="result-card__label">ROI Percentage</p>
+              <p class="result-card__value" id="result-roi">0%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Calculate -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <div class="emoji-icon emoji-icon--xl">&#x1F4D0;</div>
+          <p class="section__eyebrow">Methodology</p>
+          <h2 class="section__title">How We Calculate Your Savings</h2>
+          <p class="section__subtitle">Our ROI model is based on real customer data across 11 core property management workflows.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div class="card">
+            <h3 class="card__title">60% Average Time Savings</h3>
+            <p class="card__text">Based on data from Darsync customers managing portfolios across the UAE and GCC, our platform delivers an average of 60% time savings across these 11 workflows:</p>
+            <div class="grid grid--2" style="margin-top: var(--space-md);">
+              <ul class="checklist">
+                <li>Rent collection &amp; invoicing</li>
+                <li>Lease management &amp; renewals</li>
+                <li>Tenant communication</li>
+                <li>Maintenance coordination</li>
+                <li>Financial reporting</li>
+                <li>Compliance tracking</li>
+              </ul>
+              <ul class="checklist">
+                <li>PDC management</li>
+                <li>Owner reporting</li>
+                <li>Vacancy marketing</li>
+                <li>Document management</li>
+                <li>Team coordination</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card" style="margin-top: var(--space-md);">
+            <h3 class="card__title">Darsync Cost</h3>
+            <p class="card__text">We estimate Darsync costs at $100 per user per month, which reflects our Professional plan pricing. Your actual cost may vary based on your chosen plan and volume discounts. <a href="/pricing/">See full pricing details</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example Scenarios -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <div class="emoji-icon emoji-icon--xl">&#x1F4CB;</div>
+          <p class="section__eyebrow">Real-World Examples</p>
+          <h2 class="section__title">Savings by Portfolio Size</h2>
+          <p class="section__subtitle">See how property managers at different scales benefit from Darsync.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="emoji-icon">&#x1F3E0;</div>
+            <h3 class="card__title">Small Portfolio</h3>
+            <p style="font-size: var(--text-sm); color: var(--color-text-light); margin-bottom: var(--space-md);">50 units &bull; 2 staff &bull; 30 hrs/week</p>
+            <table class="scenario-table">
+              <tr><th colspan="2">Monthly Breakdown</th></tr>
+              <tr><td>Current Cost</td><td><strong>$6,500</strong></td></tr>
+              <tr><td>Time Savings (60%)</td><td><strong>$3,900</strong></td></tr>
+              <tr><td>Darsync Cost</td><td><strong>$200</strong></td></tr>
+              <tr><td>Net Monthly Savings</td><td><strong style="color: var(--color-primary);">$3,700</strong></td></tr>
+              <tr><td>Annual Savings</td><td><strong style="color: var(--color-primary);">$44,400</strong></td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <div class="emoji-icon">&#x1F3E2;</div>
+            <h3 class="card__title">Medium Portfolio</h3>
+            <p style="font-size: var(--text-sm); color: var(--color-text-light); margin-bottom: var(--space-md);">200 units &bull; 5 staff &bull; 40 hrs/week</p>
+            <table class="scenario-table">
+              <tr><th colspan="2">Monthly Breakdown</th></tr>
+              <tr><td>Current Cost</td><td><strong>$21,650</strong></td></tr>
+              <tr><td>Time Savings (60%)</td><td><strong>$12,990</strong></td></tr>
+              <tr><td>Darsync Cost</td><td><strong>$500</strong></td></tr>
+              <tr><td>Net Monthly Savings</td><td><strong style="color: var(--color-primary);">$12,490</strong></td></tr>
+              <tr><td>Annual Savings</td><td><strong style="color: var(--color-primary);">$149,880</strong></td></tr>
+            </table>
+          </div>
+          <div class="card">
+            <div class="emoji-icon">&#x1F3D9;&#xFE0F;</div>
+            <h3 class="card__title">Large Portfolio</h3>
+            <p style="font-size: var(--text-sm); color: var(--color-text-light); margin-bottom: var(--space-md);">500 units &bull; 12 staff &bull; 40 hrs/week</p>
+            <table class="scenario-table">
+              <tr><th colspan="2">Monthly Breakdown</th></tr>
+              <tr><td>Current Cost</td><td><strong>$51,960</strong></td></tr>
+              <tr><td>Time Savings (60%)</td><td><strong>$31,176</strong></td></tr>
+              <tr><td>Darsync Cost</td><td><strong>$1,200</strong></td></tr>
+              <tr><td>Net Monthly Savings</td><td><strong style="color: var(--color-primary);">$29,976</strong></td></tr>
+              <tr><td>Annual Savings</td><td><strong style="color: var(--color-primary);">$359,712</strong></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="section__header">
+          <div class="emoji-icon emoji-icon--xl">&#x1F680;</div>
+          <p class="section__eyebrow">Start Saving Today</p>
+          <h2 class="section__title">Start Saving Today &mdash; Free 14-Day Trial</h2>
+          <p class="section__subtitle">No credit card required. See real savings with your own data in minutes.</p>
+        </div>
+        <a href="/contact/demo.html" class="btn btn--primary btn--large">Start Free Trial</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="nav__logo"><span class="nav__logo-text"><img src="../images/image.png" alt="Darsync" height="60" style="display:block;height:60px;width:auto;object-fit:contain;"></span></a>
+          <p>Property management software built for the Gulf. GCC-native compliance, Arabic-first design, and 303+ features to run your portfolio on autopilot.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features/">Features</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/resources/how-it-works.html">How It Works</a></li>
+            <li><a href="/resources/roi-calculator.html">ROI Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="/solutions/property-managers.html">Property Managers</a></li>
+            <li><a href="/solutions/finance-teams.html">Finance Teams</a></li>
+            <li><a href="/solutions/maintenance-teams.html">Maintenance Teams</a></li>
+            <li><a href="/solutions/leasing-agents.html">Leasing Agents</a></li>
+            <li><a href="/solutions/owners-investors.html">Owners &amp; Investors</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/industries/residential.html">Residential</a></li>
+            <li><a href="/industries/commercial.html">Commercial</a></li>
+            <li><a href="/industries/mixed-use.html">Mixed-Use</a></li>
+            <li><a href="/industries/student-housing.html">Student Housing</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/resources/how-it-works.html">How It Works</a></li>
+            <li><a href="/resources/roi-calculator.html">ROI Calculator</a></li>
+            <li><a href="/resources/faq.html">FAQ</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/compare/">Compare</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Darsync. All rights reserved.</p>
+        <ul style="display:flex; gap:var(--space-lg); list-style:none;">
+          <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html">Terms of Service</a></li>
+          <li><a href="/legal/cookies.html">Cookie Policy</a></li>
+          <li><a href="/legal/refund.html">Refund Policy</a></li>
+          <li><a href="/legal/sla.html">SLA</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/tracking.js"></script>
+  <script src="../js/roi-calculator.js"></script>
+</body>
+</html>
