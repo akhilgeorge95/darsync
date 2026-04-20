@@ -29,11 +29,11 @@
   var TR = {
     en: {
       features: 'Features', solutions: 'Solutions', industries: 'Industries',
-      resources: 'Resources', cta: 'Start free trial'
+      resources: 'Resources', contact: 'Contact', cta: 'Start free trial'
     },
     ar: {
       features: 'الميزات', solutions: 'الحلول', industries: 'القطاعات',
-      resources: 'الموارد', cta: 'ابدأ النسخة التجريبية'
+      resources: 'الموارد', contact: 'تواصل معنا', cta: 'ابدأ النسخة التجريبية'
     }
   };
 
@@ -50,6 +50,7 @@
           '<a href="' + REL + 'solutions/"  data-key="solutions">Solutions</a>' +
           '<a href="' + REL + 'industries/" data-key="industries">Industries</a>' +
           '<a href="' + REL + 'resources/"  data-key="resources">Resources</a>' +
+          '<a href="' + REL + 'contact/"    data-key="contact">Contact</a>' +
         '</nav>' +
         '<div class="nav-cluster">' +
           '<div class="nav-clock" aria-label="Gulf Standard Time">' +
@@ -83,6 +84,7 @@
           '<a href="' + REL + 'solutions/"  data-key="solutions">Solutions</a>' +
           '<a href="' + REL + 'industries/" data-key="industries">Industries</a>' +
           '<a href="' + REL + 'resources/"  data-key="resources">Resources</a>' +
+          '<a href="' + REL + 'contact/"    data-key="contact">Contact</a>' +
         '</nav>' +
         '<div class="mobile-menu__footer">' +
           '<a href="' + REL + 'contact/demo.html" class="nav-cta" data-key="cta">Start free trial</a>' +
