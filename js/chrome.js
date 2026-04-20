@@ -29,11 +29,11 @@
   var TR = {
     en: {
       features: 'Features', solutions: 'Solutions', industries: 'Industries',
-      pricing: 'Pricing', resources: 'Resources', cta: 'Start free trial'
+      resources: 'Resources', cta: 'Start free trial'
     },
     ar: {
       features: 'الميزات', solutions: 'الحلول', industries: 'القطاعات',
-      pricing: 'الأسعار', resources: 'الموارد', cta: 'ابدأ النسخة التجريبية'
+      resources: 'الموارد', cta: 'ابدأ النسخة التجريبية'
     }
   };
 
@@ -49,7 +49,6 @@
           '<a href="' + REL + 'features/"   data-key="features">Features</a>' +
           '<a href="' + REL + 'solutions/"  data-key="solutions">Solutions</a>' +
           '<a href="' + REL + 'industries/" data-key="industries">Industries</a>' +
-          '<a href="' + REL + 'pricing/"    data-key="pricing">Pricing</a>' +
           '<a href="' + REL + 'resources/"  data-key="resources">Resources</a>' +
         '</nav>' +
         '<div class="nav-cluster">' +
@@ -83,14 +82,13 @@
           '<a href="' + REL + 'features/"   data-key="features">Features</a>' +
           '<a href="' + REL + 'solutions/"  data-key="solutions">Solutions</a>' +
           '<a href="' + REL + 'industries/" data-key="industries">Industries</a>' +
-          '<a href="' + REL + 'pricing/"    data-key="pricing">Pricing</a>' +
           '<a href="' + REL + 'resources/"  data-key="resources">Resources</a>' +
         '</nav>' +
         '<div class="mobile-menu__footer">' +
           '<a href="' + REL + 'contact/demo.html" class="nav-cta" data-key="cta">Start free trial</a>' +
           '<div class="mobile-menu__meta">' +
             '<span>GST · <span id="mobile-clock">--:--</span></span>' +
-            '<a href="tel:+97140000000">+971 4 XXX XXXX</a>' +
+            '<a href="tel:+971507612213">+971 50 761 2213</a>' +
           '</div>' +
         '</div>' +
       '</div>' +
@@ -125,7 +123,6 @@
       { title: 'Developers',     url: 'industries/real-estate-developers.html' }
     ]},
     { group: 'Pages', icon: '→', items: [
-      { title: 'Pricing',      url: 'pricing/' },
       { title: 'Book a demo',  url: 'contact/demo.html' },
       { title: 'ROI calculator', url: 'resources/roi-calculator.html' },
       { title: 'FAQ',          url: 'resources/faq.html' },
