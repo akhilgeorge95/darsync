@@ -6,30 +6,23 @@
     <title>Page Not Found — Darsync</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/chrome.css">
+<link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('darsync-lang');
+        if (s === 'ar' || s === 'en') {
+          document.documentElement.setAttribute('data-lang-active', s);
+          document.documentElement.setAttribute('lang', s);
+          document.documentElement.setAttribute('dir', s === 'ar' ? 'rtl' : 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="container nav__container">
-            <a href="./" class="nav__logo" aria-label="Darsync home">
-                <span class="nav__logo-text"><img src="images/image.png" alt="Darsync" height="60" style="display:block;height:60px;width:auto;object-fit:contain;"></span>
-            </a>
-            <ul class="nav__links" role="menubar">
-                <li role="none"><a href="features/" role="menuitem">Features</a></li>
-                <li role="none"><a href="solutions/" role="menuitem">Solutions</a></li>
-                <li role="none"><a href="industries/" role="menuitem">Industries</a></li>
-                <li role="none"><a href="pricing/" role="menuitem">Pricing</a></li>
-                <li role="none"><a href="resources/how-it-works.html" role="menuitem">Resources</a></li>
-            </ul>
-            <div class="nav__cta">
-                <a href="contact/demo.html" class="btn btn--primary">Start Free Trial</a>
-            </div>
-            <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
+  
     <main>
         <section class="page-hero">
             <div class="container">
@@ -83,5 +76,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+  <script src="js/chrome.js" defer></script>
 </body>
 </html>

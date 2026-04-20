@@ -12,8 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/features.css">
+      <link rel="stylesheet" href="../css/chrome.css">
+<link rel="stylesheet" href="../css/features.css">
     <link rel="stylesheet" href="../css/responsive.css">
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('darsync-lang');
+        if (s === 'ar' || s === 'en') {
+          document.documentElement.setAttribute('data-lang-active', s);
+          document.documentElement.setAttribute('lang', s);
+          document.documentElement.setAttribute('dir', s === 'ar' ? 'rtl' : 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -303,5 +316,6 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/tracking.js"></script>
+  <script src="../js/chrome.js" defer></script>
 </body>
 </html>

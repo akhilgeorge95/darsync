@@ -17,7 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/features.css">
+      <link rel="stylesheet" href="../css/chrome.css">
+<link rel="stylesheet" href="../css/features.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
     <!-- JSON-LD: Product Pricing -->
@@ -329,31 +330,23 @@
             font-size: 1.5rem;
         }
     </style>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('darsync-lang');
+        if (s === 'ar' || s === 'en') {
+          document.documentElement.setAttribute('data-lang-active', s);
+          document.documentElement.setAttribute('lang', s);
+          document.documentElement.setAttribute('dir', s === 'ar' ? 'rtl' : 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
     <!-- ─── Navigation ────────────────────────────────────────── -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="container nav__container">
-            <a href="../" class="nav__logo">
-                <span class="nav__logo-text"><img src="../images/image.png" alt="Darsync" height="60" style="display:block;height:60px;width:auto;object-fit:contain;"></span>
-            </a>
-            <ul class="nav__links">
-                <li><a href="../features/">Features</a></li>
-                <li><a href="../solutions/">Solutions</a></li>
-                <li><a href="../industries/">Industries</a></li>
-                <li><a href="./">Pricing</a></li>
-                <li><a href="../resources/">Resources</a></li>
-            </ul>
-            <div class="nav__cta">
-                <a href="../contact/" class="btn btn--primary">Start Free Trial</a>
-            </div>
-            <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
+  
     <main>
 
         <!-- ─── Page Hero ─────────────────────────────────────── -->
@@ -777,5 +770,6 @@
     })();
     </script>
 
+  <script src="../js/chrome.js" defer></script>
 </body>
 </html>
