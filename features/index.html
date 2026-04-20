@@ -3742,6 +3742,464 @@
       border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
     }
 
+    /* ═════════ FEATURES-PAGE UNIQUES ═════════ */
+
+    /* ─── Feature Matrix (hero visual) ─────────────────────── */
+    .feat-hero-visual {
+      position: relative;
+      min-height: 560px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 20px;
+    }
+    .feat-matrix {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      background: #FFFFFF;
+      border: 1px solid #2C1810;
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow:
+        12px 12px 0 -1px #2C1810,
+        24px 24px 60px -20px rgba(44, 24, 16, 0.25);
+      transform: rotate(-0.8deg);
+      transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .feat-matrix:hover { transform: rotate(0deg) translateY(-4px); }
+
+    .feat-matrix__head {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px dashed rgba(44, 24, 16, 0.18);
+    }
+    .feat-matrix__title {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #2C1810;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .feat-matrix__dot {
+      width: 8px; height: 8px;
+      background: #B46428;
+      border-radius: 50%;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    .feat-matrix__count {
+      display: flex; flex-direction: column; align-items: flex-end;
+      line-height: 1;
+    }
+    .feat-matrix__count > span:first-child {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2C1810;
+      letter-spacing: -0.03em;
+    }
+    .feat-matrix__count small {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: #8A7B6A;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .feat-matrix__legend {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px 14px;
+      margin-bottom: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8A7B6A;
+    }
+    .feat-matrix__legend span {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding-left: 2px;
+    }
+    .feat-matrix__legend span::before {
+      content: '';
+      width: 8px; height: 8px; border-radius: 2px;
+    }
+    .feat-matrix__legend span[data-fam="comp"]::before  { background: #2C1810; }
+    .feat-matrix__legend span[data-fam="fin"]::before   { background: #B46428; }
+    .feat-matrix__legend span[data-fam="lease"]::before { background: #D89460; }
+    .feat-matrix__legend span[data-fam="ops"]::before   { background: #8A7B6A; border: 1px solid #2C1810; }
+    .feat-matrix__legend span[data-fam="comms"]::before { background: #F3EDE3; border: 1px solid #B46428; }
+    .feat-matrix__legend span[data-fam="ai"]::before    { background: #C77A3B; }
+
+    .feat-matrix__grid {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 3px;
+      margin-bottom: 18px;
+    }
+    .feat-matrix__cell {
+      aspect-ratio: 1 / 1;
+      border-radius: 2px;
+      position: relative;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      cursor: pointer;
+    }
+    .feat-matrix__cell[data-fam="comp"]  { background: #2C1810; }
+    .feat-matrix__cell[data-fam="fin"]   { background: #B46428; }
+    .feat-matrix__cell[data-fam="lease"] { background: #D89460; }
+    .feat-matrix__cell[data-fam="ops"]   { background: #8A7B6A; }
+    .feat-matrix__cell[data-fam="comms"] { background: #F3EDE3; border: 1px solid rgba(180,100,40,0.25); }
+    .feat-matrix__cell[data-fam="ai"]    { background: #C77A3B; }
+    .feat-matrix__cell:hover {
+      transform: scale(1.7);
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(44, 24, 16, 0.35);
+    }
+    .feat-matrix__cell[data-live="1"] { animation: matrix-pulse 2.4s ease-in-out infinite; }
+    @keyframes matrix-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.45; }
+    }
+
+    .feat-matrix__footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(44, 24, 16, 0.18);
+      gap: 10px;
+    }
+    .feat-matrix__stat {
+      display: flex; flex-direction: column; align-items: center;
+      flex: 1;
+    }
+    .feat-matrix__stat strong {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #2C1810;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .feat-matrix__stat small {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      color: #8A7B6A;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .feat-matrix__sep {
+      width: 1px; height: 28px;
+      background: rgba(44, 24, 16, 0.15);
+    }
+
+    .feat-hero-annot {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.64rem;
+      color: #8A7B6A;
+      letter-spacing: 0.08em;
+      z-index: 2;
+    }
+    .feat-hero-annot--tl { top: -8px; right: -20px; transform: rotate(2deg); }
+    .feat-hero-annot--tl::after {
+      content: ''; display: inline-block; width: 28px; height: 1px;
+      background: #B46428; margin-left: 8px; vertical-align: middle;
+    }
+    .feat-hero-annot--br { bottom: -40px; left: 20px; color: #B46428; }
+    .feat-hero-annot--br::before { content: '↳ '; }
+
+    @media (max-width: 1180px) {
+      .feat-matrix { max-width: 440px; }
+      .feat-matrix__grid { grid-template-columns: repeat(13, 1fr); }
+    }
+    @media (max-width: 860px) {
+      .feat-hero-visual { min-height: 460px; padding: 10px; }
+      .feat-matrix { max-width: 360px; transform: rotate(0); }
+      .feat-matrix__grid { grid-template-columns: repeat(12, 1fr); }
+      .feat-hero-annot--tl { right: 0; }
+      .feat-hero-annot--br { bottom: -32px; left: 10px; }
+    }
+
+    /* ─── Capability Showcase (replaces bento on features) ──── */
+    .cap-showcase {
+      padding: 100px 0;
+      background: #FFFFFF;
+      position: relative;
+    }
+    .cap-showcase::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background-image: linear-gradient(to right, #2C1810 50%, transparent 50%);
+      background-size: 12px 1px;
+    }
+    .cap-showcase__header {
+      max-width: 1100px;
+      margin: 0 auto 56px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: end;
+    }
+    .cap-showcase__eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #B46428;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .cap-showcase__eyebrow::before {
+      content: '[§ 04]';
+      background: #2C1810;
+      color: #D89460;
+      padding: 4px 8px;
+      border-radius: 2px;
+    }
+    .cap-showcase h2 {
+      grid-column: 1 / -1;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: clamp(2rem, 1.4rem + 2.5vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1;
+      color: #2C1810;
+      margin: 0;
+      max-width: 680px;
+    }
+    .cap-showcase__header p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem; color: #3D2817;
+      max-width: 440px; margin: 0;
+      grid-column: 3 / -1;
+      text-align: right;
+      line-height: 1.55;
+    }
+
+    /* Family tabs */
+    .cap-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding: 0 24px;
+      margin-bottom: 28px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cap-tab {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #2C1810;
+      background: #FFFFFF;
+      border: 1px solid rgba(44, 24, 16, 0.12);
+      border-radius: 999px;
+      padding: 10px 18px;
+      cursor: pointer;
+      transition: all 200ms ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cap-tab:hover { border-color: #B46428; color: #B46428; }
+    .cap-tab.is-active {
+      background: #2C1810;
+      color: #FFFFFF;
+      border-color: #2C1810;
+    }
+    .cap-tab .cap-tab__count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.66rem;
+      font-weight: 500;
+      opacity: 0.7;
+    }
+    .cap-tab.is-active .cap-tab__count { color: #D89460; opacity: 1; }
+
+    /* Active family panel */
+    .cap-panel {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: none;
+    }
+    .cap-panel.is-active { display: block; }
+
+    .cap-panel__top {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 32px;
+      padding: 32px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #2C1810 0%, #3D2415 60%, #4A2B18 100%);
+      color: #FAF7F2;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .cap-panel__top::before {
+      content: '';
+      position: absolute;
+      top: -40%; right: -20%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(216, 148, 96, 0.22) 0%, transparent 55%);
+      filter: blur(30px);
+      pointer-events: none;
+    }
+    .cap-panel__lead { position: relative; }
+    .cap-panel__lead h3 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .cap-panel__lead h3 em { color: #D89460; font-style: normal; }
+    .cap-panel__lead p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: rgba(250, 247, 242, 0.82);
+      line-height: 1.6;
+      max-width: 420px;
+    }
+
+    .cap-panel__stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      position: relative;
+      align-content: start;
+    }
+    .cap-panel__stat {
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    .cap-panel__stat strong {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #D89460;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .cap-panel__stat span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(250, 247, 242, 0.7);
+    }
+
+    .cap-panel__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .cap-module {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: #FFFFFF;
+      border: 1px solid rgba(44, 24, 16, 0.08);
+      border-radius: 4px;
+      transition: all 200ms ease;
+    }
+    .cap-module:hover {
+      border-color: #B46428;
+      transform: translateX(2px);
+      box-shadow: 0 6px 16px -6px rgba(44, 24, 16, 0.15);
+    }
+    .cap-module__dot {
+      width: 6px; height: 6px;
+      background: #B46428;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .cap-module__name {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #2C1810;
+      flex: 1;
+    }
+    .cap-module__badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: #8A7B6A;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 860px) {
+      .cap-showcase__header { grid-template-columns: 1fr; }
+      .cap-showcase__header p { grid-column: auto; text-align: left; }
+      .cap-panel__top { grid-template-columns: 1fr; padding: 24px; }
+      .cap-panel__grid { grid-template-columns: 1fr; }
+      .cap-tabs { padding: 0 20px; }
+    }
+
+    /* ─── Integrations strip ────────────────────────────────── */
+    .integrations {
+      padding: 70px 0;
+      background: #FAF7F2;
+      border-top: 1px solid rgba(44, 24, 16, 0.08);
+      border-bottom: 1px solid rgba(44, 24, 16, 0.08);
+      text-align: center;
+    }
+    .integrations__label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: #8A7B6A;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .integrations__row {
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: center;
+      gap: 12px 18px;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 24px;
+    }
+    .integ-chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px;
+      background: #FFFFFF;
+      border: 1px solid rgba(44, 24, 16, 0.1);
+      border-radius: 999px;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2C1810;
+      letter-spacing: -0.005em;
+      transition: all 220ms ease;
+    }
+    .integ-chip:hover {
+      border-color: #B46428;
+      color: #B46428;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px -6px rgba(180, 100, 40, 0.3);
+    }
+    .integ-chip__dot {
+      width: 6px; height: 6px;
+      background: #B46428;
+      border-radius: 50%;
+    }
+
   </style>
 
   <!-- Lang bootstrap: apply saved language immediately, before body renders (no FOUC) -->
@@ -3851,11 +4309,10 @@
   <!-- ============ SIDE SCROLL-PROGRESS RAIL ============ -->
   <aside class="scroll-rail" aria-hidden="true" id="scroll-rail">
     <div class="scroll-rail__item scroll-rail__item--active" data-target="hero"><span class="scroll-rail__dot"></span><span>§ 01 · overview</span></div>
-    <div class="scroll-rail__item" data-target="arabic"><span class="scroll-rail__dot"></span><span>§ 02 · brand</span></div>
-    <div class="scroll-rail__item" data-target="statement"><span class="scroll-rail__dot"></span><span>§ 03 · the system</span></div>
-    <div class="scroll-rail__item" data-target="features"><span class="scroll-rail__dot"></span><span>§ 04 · families</span></div>
-    <div class="scroll-rail__item" data-target="feature-list"><span class="scroll-rail__dot"></span><span>§ 05 · full list</span></div>
-    <div class="scroll-rail__item" data-target="cta"><span class="scroll-rail__dot"></span><span>§ 06 · get started</span></div>
+    <div class="scroll-rail__item" data-target="statement"><span class="scroll-rail__dot"></span><span>§ 02 · the system</span></div>
+    <div class="scroll-rail__item" data-target="features"><span class="scroll-rail__dot"></span><span>§ 03 · capabilities</span></div>
+    <div class="scroll-rail__item" data-target="feature-list"><span class="scroll-rail__dot"></span><span>§ 04 · full list</span></div>
+    <div class="scroll-rail__item" data-target="cta"><span class="scroll-rail__dot"></span><span>§ 05 · get started</span></div>
   </aside>
 
   <main>
@@ -3904,77 +4361,45 @@
             </div>
           </div>
 
-          <!-- Visual: Module Index — features-flavoured passport card -->
-          <div class="hero-visual" aria-hidden="true">
-            <span class="passport-annotation passport-annotation--top">
-              <span data-i18n="passport.annotTop">↑ Six families, 303+ modules</span>
-            </span>
-            <span class="passport-annotation passport-annotation--left" data-i18n="passport.regNo">
-              INDEX NO. DS-MODULES-v.2.6
-            </span>
+          <!-- Visual: Feature Matrix — a capability map, distinct from home -->
+          <div class="hero-visual feat-hero-visual" aria-hidden="true">
 
-            <div class="passport-card">
-              <div class="passport-header">
-                <span class="passport-header__left" data-i18n="passport.label">Module Index</span>
-                <span class="passport-header__right">GST · <span id="live-clock">--:--:--</span></span>
+            <div class="feat-matrix" id="feat-matrix">
+              <div class="feat-matrix__head">
+                <div class="feat-matrix__title">
+                  <span class="feat-matrix__dot"></span>
+                  <span data-i18n="matrix.title">The capability matrix</span>
+                </div>
+                <div class="feat-matrix__count">
+                  <span data-counter="303" data-suffix="+">0</span>
+                  <small data-i18n="matrix.count">modules live</small>
+                </div>
               </div>
 
-              <div class="passport-body">
-                <div class="passport-title" data-i18n="passport.title">Darsync · Feature Directory</div>
-                <div class="passport-subtitle" data-i18n="passport.subtitle">v2.6 · UAE + KSA + Qatar + Bahrain</div>
+              <div class="feat-matrix__legend">
+                <span data-fam="comp">Compliance</span>
+                <span data-fam="fin">Finance</span>
+                <span data-fam="lease">Leasing</span>
+                <span data-fam="ops">Operations</span>
+                <span data-fam="comms">Portals</span>
+                <span data-fam="ai">Analytics</span>
+              </div>
 
-                <div class="passport-grid">
-                  <div class="passport-field">
-                    <span class="passport-field__label" data-i18n="passport.fieldEjari">Compliance</span>
-                    <span class="passport-field__value passport-field__value--copper" data-i18n="passport.valRenewed">58 modules</span>
-                  </div>
-                  <div class="passport-field">
-                    <span class="passport-field__label" data-i18n="passport.fieldTerm">Finance</span>
-                    <span class="passport-field__value" data-i18n="passport.val12mo">62 modules</span>
-                  </div>
-                  <div class="passport-field">
-                    <span class="passport-field__label" data-i18n="passport.fieldRent">Leasing</span>
-                    <span class="passport-field__value">47 modules</span>
-                  </div>
-                  <div class="passport-field">
-                    <span class="passport-field__label" data-i18n="passport.fieldPDC">Maintenance</span>
-                    <span class="passport-field__value">54 modules</span>
-                  </div>
-                  <div class="passport-field">
-                    <span class="passport-field__label" data-i18n="passport.fieldInspect">Portals &amp; comms</span>
-                    <span class="passport-field__value" data-i18n="passport.valInspect">43 modules</span>
-                  </div>
-                  <div class="passport-field">
-                    <span class="passport-field__label" data-i18n="passport.fieldTickets">Analytics &amp; AI</span>
-                    <span class="passport-field__value">39 modules</span>
-                  </div>
-                </div>
+              <div class="feat-matrix__grid" role="img" aria-label="Matrix of 303+ feature modules colour-coded by family">
+                <!-- JS generates cells; this fallback renders a static grid -->
+              </div>
 
-                <div class="passport-footer">
-                  <div class="passport-qr" aria-hidden="true"></div>
-                  <div class="passport-meta">
-                    <strong data-i18n="passport.owner">Platform · Darsync OS</strong>
-                    <div data-i18n="passport.signed">Last release · APR.2026 · v2.6</div>
-                    <div data-i18n="passport.lastSync">Shipping · every 2 weeks</div>
-                  </div>
-                  <div class="passport-stamp">
-                    <span class="passport-stamp__word1" data-i18n="passport.stamp1">All</span>
-                    <span class="passport-stamp__word2" data-i18n="passport.stamp2">Live</span>
-                    <span class="passport-stamp__word3" data-i18n="passport.stamp3">v2.6</span>
-                  </div>
-                </div>
+              <div class="feat-matrix__footer">
+                <span class="feat-matrix__stat"><strong>6</strong><small data-i18n="matrix.fam">families</small></span>
+                <span class="feat-matrix__sep"></span>
+                <span class="feat-matrix__stat"><strong>11</strong><small data-i18n="matrix.flows">workflows</small></span>
+                <span class="feat-matrix__sep"></span>
+                <span class="feat-matrix__stat"><strong>v2.6</strong><small data-i18n="matrix.rel">APR 2026</small></span>
               </div>
             </div>
 
-            <!-- Floating alert ping -->
-            <div class="passport-alert">
-              <strong data-i18n="alert.title">New: AI insights</strong>
-              <span data-i18n="alert.body">Vacancy prediction · shipped 2m ago</span>
-            </div>
-
-            <span class="passport-annotation passport-annotation--bottom" data-i18n="passport.annotBottom">
-              Every module · built for the Gulf
-            </span>
+            <span class="feat-hero-annot feat-hero-annot--tl" data-i18n="matrix.annotTL">Live release · v2.6 ships every 2 weeks</span>
+            <span class="feat-hero-annot feat-hero-annot--br" data-i18n="matrix.annotBR">Hover any cell to see the module</span>
           </div>
 
         </div>
@@ -4023,18 +4448,6 @@
       </div>
     </section>
 
-    <!-- ============ ARABIC BAND — bilingual moment ============ -->
-    <section class="arabic-band" aria-label="Brand statement in Arabic" id="arabic">
-      <div class="arabic-band__spotlight" aria-hidden="true"></div>
-      <div class="arabic-band__cursor" aria-hidden="true"></div>
-      <div class="container">
-        <span class="arabic-band__eyebrow reveal"><span data-i18n="arabic.eyebrow">§ 02 / the name</span></span>
-        <div class="arabic-band__word reveal" data-delay="1" lang="ar">دارسنك</div>
-        <div class="arabic-band__translit reveal" data-delay="2" data-i18n-html="arabic.translit">Dār + <em>sync</em> — your property, <em>in sync.</em></div>
-        <p class="arabic-band__body reveal" data-delay="3" data-i18n-html="arabic.body">Dār (دار) means <em>home</em>, <em>estate</em>, <em>residence</em>. Sync is what every modern property operation is still missing. Darsync is both — a single, living record of every home you manage.</p>
-      </div>
-    </section>
-
     <!-- ============ STATEMENT ============ -->
     <section class="statement-section" id="statement">
       <span class="statement-section__watermark" aria-hidden="true" data-i18n="statement.watermark">303+</span>
@@ -4045,82 +4458,194 @@
       </div>
     </section>
 
-    <!-- ============ BENTO FEATURE CATEGORIES ============ -->
-    <section class="bento-section" id="features">
-      <div class="container">
-        <div class="bento-header">
-          <span class="bento-header__eyebrow" data-i18n="bento.eyebrow">§ 04 / feature families</span>
-          <h2 data-i18n="bento.title">Six families. One living platform.</h2>
-          <p data-i18n="bento.sub">Every module clicks into the same data model — compliance events trigger finance workflows, which trigger owner reports, which trigger tenant notifications.</p>
+    <!-- ============ CAPABILITY SHOWCASE — tabbed family explorer ============ -->
+    <section class="cap-showcase" id="features">
+      <div class="cap-showcase__header reveal">
+        <span class="cap-showcase__eyebrow">§ 04 / explore a family</span>
+        <h2>Pick a family. See every module inside.</h2>
+        <p>Six capability families, 303 modules — tap a tab and drill into the list. Every module clicks into the same data model.</p>
+      </div>
+
+      <div class="cap-tabs reveal" data-delay="1" role="tablist">
+        <button class="cap-tab is-active" data-panel="comp">Compliance <span class="cap-tab__count">58</span></button>
+        <button class="cap-tab" data-panel="fin">Finance <span class="cap-tab__count">62</span></button>
+        <button class="cap-tab" data-panel="lease">Leasing <span class="cap-tab__count">47</span></button>
+        <button class="cap-tab" data-panel="ops">Operations <span class="cap-tab__count">54</span></button>
+        <button class="cap-tab" data-panel="comms">Portals &amp; Comms <span class="cap-tab__count">43</span></button>
+        <button class="cap-tab" data-panel="ai">Analytics &amp; AI <span class="cap-tab__count">39</span></button>
+      </div>
+
+      <!-- Compliance panel -->
+      <div class="cap-panel is-active reveal" data-delay="2" data-panel="comp">
+        <div class="cap-panel__top">
+          <div class="cap-panel__lead">
+            <h3>Ejari, RERA, Tawtheeq &amp; DLD — <em>on autopilot.</em></h3>
+            <p>Every regulatory surface in the UAE and wider GCC, handled by the same engine: automated filings, deadline tracking, audit-ready logs, and visa/license monitoring.</p>
+          </div>
+          <div class="cap-panel__stats">
+            <div class="cap-panel__stat"><strong>58</strong><span>modules</span></div>
+            <div class="cap-panel__stat"><strong>4</strong><span>jurisdictions</span></div>
+            <div class="cap-panel__stat"><strong>0</strong><span>missed filings</span></div>
+            <div class="cap-panel__stat"><strong>&lt;60s</strong><span>avg. filing time</span></div>
+          </div>
         </div>
-
-        <div class="bento-grid">
-
-          <a href="ejari-compliance.html" class="bento bento--hero reveal">
-            <div>
-              <span class="bento__eyebrow" data-i18n="bento.heroEye">Compliance · 58 modules</span>
-              <h3 class="bento__title" data-i18n-html="bento.heroTitle">Ejari, RERA, Tawtheeq &amp; DLD — <em>zero missed deadlines.</em></h3>
-              <p class="bento__body" data-i18n="bento.heroBody">Automated registration, renewal tracking, compliance calendars, audit trails, visa and trade license monitoring. Every regulatory surface in the UAE and wider GCC — handled on autopilot.</p>
-            </div>
-            <div>
-              <div class="bento-hero__figure">
-                <div class="bento-hero__stat"><strong data-counter="58" data-suffix="+">0</strong><span data-i18n="bento.statFeat">Compliance modules</span></div>
-                <div class="bento-hero__stat"><strong data-counter="4">0</strong><span data-i18n="bento.statFlow">Jurisdictions</span></div>
-                <div class="bento-hero__stat"><strong data-counter="0">0</strong><span data-i18n="bento.statRole">Missed filings</span></div>
-              </div>
-              <div class="live-feed" id="live-feed" aria-hidden="true">
-                <div class="live-feed__event active">
-                  <span class="live-feed__icon">◆</span>
-                  <span class="live-feed__text"><strong>Ejari renewed</strong> — Unit 412 — Marina Gate</span>
-                  <span class="live-feed__time">now</span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="pdc-automation.html" class="bento bento--copper reveal">
-            <div>
-              <div class="bento-icon">✓</div>
-              <span class="bento__eyebrow" data-i18n="bento.cpEye">Finance · 62 modules</span>
-              <h3 class="bento__title" data-i18n="bento.cpTitle">PDC, multi-currency &amp; reconciliation.</h3>
-              <p class="bento__body" data-i18n="bento.cpBody">Automate the cheque lifecycle, track disbursements, reconcile bank feeds.</p>
-            </div>
-            <span class="bento__link" data-i18n="bento.cpLink">See finance →</span>
-          </a>
-
-          <a href="lease-management.html" class="bento bento--cream reveal">
-            <div>
-              <div class="bento-icon">◈</div>
-              <span class="bento__eyebrow" data-i18n="bento.pdEye">Leasing · 47 modules</span>
-              <h3 class="bento__title" data-i18n="bento.pdTitle">Lease lifecycle, e-signed.</h3>
-              <p class="bento__body" data-i18n="bento.pdBody">Draft, sign, escalate, renew. Tenant screening to move-out.</p>
-            </div>
-            <div class="bento-mini-chart" style="color:#B46428">
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-          </a>
-
-          <a href="smart-maintenance.html" class="bento bento--tan reveal">
-            <div>
-              <div class="bento-icon">◐</div>
-              <span class="bento__eyebrow" data-i18n="bento.waEye">Operations · 54 modules</span>
-              <h3 class="bento__title" data-i18n="bento.waTitle">Maintenance, assets &amp; WhatsApp dispatch.</h3>
-              <p class="bento__body" data-i18n="bento.waBody">SLA-driven work orders. AI routing. GPS tracking. Preventive scheduling. Vendor scoring. Tenants chat on the platform they already use.</p>
-            </div>
-            <span class="bento__link" style="color:#B46428" data-i18n="bento.waLink">See operations →</span>
-          </a>
-
-          <a href="ai-insights.html" class="bento bento--dark reveal">
-            <div>
-              <div class="bento-icon">◧</div>
-              <span class="bento__eyebrow" data-i18n="bento.owEye">Analytics · 39 modules</span>
-              <h3 class="bento__title" data-i18n-html="bento.owTitle">AI insights &amp; <em>predictive reports.</em></h3>
-              <p class="bento__body" data-i18n="bento.owBody">50+ prebuilt reports, custom dashboards, vacancy prediction, ROI per unit, NOI forecasting.</p>
-            </div>
-            <span class="bento__link" data-i18n="bento.owLink">See analytics →</span>
-          </a>
-
+        <div class="cap-panel__grid">
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Ejari auto-registration</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Tawtheeq integration (AD)</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">DLD &amp; RERA tracking</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Document expiry alerts</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Compliance calendar</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Visa &amp; Emirates ID tracking</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Trade license monitoring</span><span class="cap-module__badge">→</span></a>
+          <a href="ejari-compliance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Full audit trail exports</span><span class="cap-module__badge">→</span></a>
         </div>
+      </div>
+
+      <!-- Finance panel -->
+      <div class="cap-panel" data-panel="fin">
+        <div class="cap-panel__top">
+          <div class="cap-panel__lead">
+            <h3>PDC, multi-currency &amp; <em>bank-feed reconciliation.</em></h3>
+            <p>The full finance stack — post-dated cheque lifecycle, VAT-compliant invoicing, multi-currency ledgers, and automated bank-feed reconciliation across the Gulf's major banks.</p>
+          </div>
+          <div class="cap-panel__stats">
+            <div class="cap-panel__stat"><strong>62</strong><span>modules</span></div>
+            <div class="cap-panel__stat"><strong>5</strong><span>currencies</span></div>
+            <div class="cap-panel__stat"><strong>8h</strong><span>avg. month-close</span></div>
+            <div class="cap-panel__stat"><strong>95%</strong><span>auto-reconciled</span></div>
+          </div>
+        </div>
+        <div class="cap-panel__grid">
+          <a href="pdc-automation.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">PDC lifecycle automation</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Multi-currency (AED/USD/SAR/QAR/BHD)</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">VAT-compliant invoicing</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Automated rent collection</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Owner disbursement mgmt</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Bank reconciliation (auto-feed)</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Budget vs. actuals</span><span class="cap-module__badge">→</span></a>
+          <a href="financial-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Security deposit ledger</span><span class="cap-module__badge">→</span></a>
+        </div>
+      </div>
+
+      <!-- Leasing panel -->
+      <div class="cap-panel" data-panel="lease">
+        <div class="cap-panel__top">
+          <div class="cap-panel__lead">
+            <h3>Lease lifecycle — <em>draft to renewal.</em></h3>
+            <p>Generate leases from templates, e-sign via UAE Pass, automate rent escalation, track renewals, and screen tenants with credit scoring — all from one record.</p>
+          </div>
+          <div class="cap-panel__stats">
+            <div class="cap-panel__stat"><strong>47</strong><span>modules</span></div>
+            <div class="cap-panel__stat"><strong>12</strong><span>lease templates</span></div>
+            <div class="cap-panel__stat"><strong>90d</strong><span>renewal alerts</span></div>
+            <div class="cap-panel__stat"><strong>e-sign</strong><span>UAE Pass</span></div>
+          </div>
+        </div>
+        <div class="cap-panel__grid">
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Digital lease creation</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">E-signature (UAE Pass)</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Automated rent escalation</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Renewal management</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Tenant screening &amp; scoring</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Vacancy marketing automation</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Move-in / move-out workflows</span><span class="cap-module__badge">→</span></a>
+          <a href="lease-management.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Lease clause library</span><span class="cap-module__badge">→</span></a>
+        </div>
+      </div>
+
+      <!-- Operations panel -->
+      <div class="cap-panel" data-panel="ops">
+        <div class="cap-panel__top">
+          <div class="cap-panel__lead">
+            <h3>Maintenance, assets &amp; <em>WhatsApp dispatch.</em></h3>
+            <p>SLA-driven work orders, AI routing, GPS tech tracking, preventive scheduling and vendor scoring — tenants chat over WhatsApp, every message logs against the unit.</p>
+          </div>
+          <div class="cap-panel__stats">
+            <div class="cap-panel__stat"><strong>54</strong><span>modules</span></div>
+            <div class="cap-panel__stat"><strong>AI</strong><span>auto-route</span></div>
+            <div class="cap-panel__stat"><strong>GPS</strong><span>tech tracking</span></div>
+            <div class="cap-panel__stat"><strong>WA</strong><span>native</span></div>
+          </div>
+        </div>
+        <div class="cap-panel__grid">
+          <a href="smart-maintenance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">SLA-driven work orders</span><span class="cap-module__badge">→</span></a>
+          <a href="smart-maintenance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">AI auto-assignment</span><span class="cap-module__badge">→</span></a>
+          <a href="smart-maintenance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">GPS technician tracking</span><span class="cap-module__badge">→</span></a>
+          <a href="smart-maintenance.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Preventive scheduling</span><span class="cap-module__badge">→</span></a>
+          <a href="facility-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Parts inventory</span><span class="cap-module__badge">→</span></a>
+          <a href="facility-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Vendor management &amp; scoring</span><span class="cap-module__badge">→</span></a>
+          <a href="facility-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Asset lifecycle tracking</span><span class="cap-module__badge">→</span></a>
+          <a href="facility-operations.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Energy &amp; utility monitoring</span><span class="cap-module__badge">→</span></a>
+        </div>
+      </div>
+
+      <!-- Comms panel -->
+      <div class="cap-panel" data-panel="comms">
+        <div class="cap-panel__top">
+          <div class="cap-panel__lead">
+            <h3>Tenant, owner &amp; <em>WhatsApp-native portals.</em></h3>
+            <p>Three portals — tenant, owner, vendor — plus WhatsApp Business, SMS and email automation. Tenants use the app they already have; you get the audit trail.</p>
+          </div>
+          <div class="cap-panel__stats">
+            <div class="cap-panel__stat"><strong>43</strong><span>modules</span></div>
+            <div class="cap-panel__stat"><strong>3</strong><span>portals</span></div>
+            <div class="cap-panel__stat"><strong>60%</strong><span>fewer calls</span></div>
+            <div class="cap-panel__stat"><strong>WA</strong><span>Business API</span></div>
+          </div>
+        </div>
+        <div class="cap-panel__grid">
+          <a href="tenant-portal.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Tenant self-service portal</span><span class="cap-module__badge">→</span></a>
+          <a href="owner-dashboard.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Owner / investor dashboard</span><span class="cap-module__badge">→</span></a>
+          <a href="whatsapp-workflows.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">WhatsApp Business API</span><span class="cap-module__badge">→</span></a>
+          <a href="communication-collaboration.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">SMS &amp; email automation</span><span class="cap-module__badge">→</span></a>
+          <a href="communication-collaboration.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">In-app messaging threads</span><span class="cap-module__badge">→</span></a>
+          <a href="community-engagement.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Community announcements</span><span class="cap-module__badge">→</span></a>
+          <a href="community-engagement.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Amenity booking</span><span class="cap-module__badge">→</span></a>
+          <a href="security-access.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Visitor &amp; access mgmt</span><span class="cap-module__badge">→</span></a>
+        </div>
+      </div>
+
+      <!-- AI panel -->
+      <div class="cap-panel" data-panel="ai">
+        <div class="cap-panel__top">
+          <div class="cap-panel__lead">
+            <h3>50+ reports, <em>AI-powered forecasts.</em></h3>
+            <p>Pre-built operational reports, a custom dashboard builder, and AI models that predict vacancies, forecast NOI and surface tenants at retention risk — all on the live portfolio.</p>
+          </div>
+          <div class="cap-panel__stats">
+            <div class="cap-panel__stat"><strong>39</strong><span>modules</span></div>
+            <div class="cap-panel__stat"><strong>50+</strong><span>prebuilt reports</span></div>
+            <div class="cap-panel__stat"><strong>AI</strong><span>forecasting</span></div>
+            <div class="cap-panel__stat"><strong>CSV</strong><span>/ BI export</span></div>
+          </div>
+        </div>
+        <div class="cap-panel__grid">
+          <a href="ai-insights.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">50+ pre-built reports</span><span class="cap-module__badge">→</span></a>
+          <a href="reporting-analytics.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Custom dashboard builder</span><span class="cap-module__badge">→</span></a>
+          <a href="reporting-analytics.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Occupancy analytics</span><span class="cap-module__badge">→</span></a>
+          <a href="ai-insights.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Revenue forecasting</span><span class="cap-module__badge">→</span></a>
+          <a href="ai-insights.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Tenant retention prediction</span><span class="cap-module__badge">→</span></a>
+          <a href="smart-rent-pricing.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">Market rent comparison</span><span class="cap-module__badge">→</span></a>
+          <a href="reporting-analytics.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">ROI per unit</span><span class="cap-module__badge">→</span></a>
+          <a href="ai-insights.html" class="cap-module"><span class="cap-module__dot"></span><span class="cap-module__name">AI vacancy prediction</span><span class="cap-module__badge">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTEGRATIONS STRIP ============ -->
+    <section class="integrations">
+      <div class="integrations__label reveal">Darsync connects natively to</div>
+      <div class="integrations__row">
+        <span class="integ-chip reveal"><span class="integ-chip__dot"></span>Ejari</span>
+        <span class="integ-chip reveal" data-delay="1"><span class="integ-chip__dot"></span>Tawtheeq</span>
+        <span class="integ-chip reveal" data-delay="1"><span class="integ-chip__dot"></span>DLD</span>
+        <span class="integ-chip reveal" data-delay="2"><span class="integ-chip__dot"></span>RERA</span>
+        <span class="integ-chip reveal" data-delay="2"><span class="integ-chip__dot"></span>ADREC</span>
+        <span class="integ-chip reveal" data-delay="3"><span class="integ-chip__dot"></span>UAE Pass</span>
+        <span class="integ-chip reveal" data-delay="3"><span class="integ-chip__dot"></span>WhatsApp Business</span>
+        <span class="integ-chip reveal" data-delay="4"><span class="integ-chip__dot"></span>Emirates NBD</span>
+        <span class="integ-chip reveal" data-delay="4"><span class="integ-chip__dot"></span>ADCB</span>
+        <span class="integ-chip reveal" data-delay="5"><span class="integ-chip__dot"></span>Mashreq</span>
       </div>
     </section>
 
@@ -5308,6 +5833,47 @@
         else if (e.key === 'ArrowDown') { e.preventDefault(); setActiveCmdk(Math.min(cmdkActive + 1, cmdkItems.length - 1)); }
         else if (e.key === 'ArrowUp')   { e.preventDefault(); setActiveCmdk(Math.max(cmdkActive - 1, 0)); }
         else if (e.key === 'Enter' && cmdkItems[cmdkActive]) { window.location.href = cmdkItems[cmdkActive].href; }
+      });
+    }
+
+    // ─── Feature Matrix: generate 303 cells colour-coded by family ────
+    var matrixGrid = document.querySelector('.feat-matrix__grid');
+    if (matrixGrid) {
+      // distribution proportional to module counts: comp 58, fin 62, lease 47, ops 54, comms 43, ai 39 = 303
+      var families = [];
+      var counts = { comp: 58, fin: 62, lease: 47, ops: 54, comms: 43, ai: 39 };
+      Object.keys(counts).forEach(function(k) {
+        for (var i = 0; i < counts[k]; i++) families.push(k);
+      });
+      // shuffle for a natural mixed pattern
+      for (var i = families.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = families[i]; families[i] = families[j]; families[j] = t;
+      }
+      var frag = document.createDocumentFragment();
+      families.forEach(function(fam, idx) {
+        var c = document.createElement('div');
+        c.className = 'feat-matrix__cell';
+        c.setAttribute('data-fam', fam);
+        // sprinkle "live" pulse on ~8 random cells
+        if (idx < 8) c.setAttribute('data-live', '1');
+        frag.appendChild(c);
+      });
+      matrixGrid.appendChild(frag);
+    }
+
+    // ─── Capability tabs (family switcher) ───────────────────
+    var capTabs = document.querySelectorAll('.cap-tab');
+    var capPanels = document.querySelectorAll('.cap-panel');
+    if (capTabs.length && capPanels.length) {
+      capTabs.forEach(function(t) {
+        t.addEventListener('click', function() {
+          var target = t.getAttribute('data-panel');
+          capTabs.forEach(function(x) { x.classList.toggle('is-active', x === t); });
+          capPanels.forEach(function(p) {
+            p.classList.toggle('is-active', p.getAttribute('data-panel') === target);
+          });
+        });
       });
     }
 
