@@ -42,7 +42,7 @@
     '<header class="site-header" role="banner">' +
       '<div class="nav-shell">' +
         '<a href="' + REL + '" class="logo" aria-label="Darsync Home">' +
-          '<img src="' + REL + 'images/image.png" alt="Darsync" height="90" style="display:block;height:90px;width:auto;object-fit:contain;">' +
+          '<img src="' + REL + 'images/image.png" alt="Darsync" height="130" style="display:block;height:130px;width:auto;object-fit:contain;">' +
         '</a>' +
         '<nav class="nav-pill" role="navigation" aria-label="Main navigation">' +
           '<span class="nav-pill__indicator" aria-hidden="true"></span>' +
